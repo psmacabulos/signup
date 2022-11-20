@@ -1,44 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 :root {
   --primary_color: #ddc7ad;
   --secondary_color: #4a2a10;
-  --dark_color: #b3b2bd;
+  --dark_color: #333335;
   --light_color: #e5e8ee;
-  --highlight_color: c;
-  --tertiary_color: #6c4c64;
+  --highlight_color: #ff1811;
+  --tertiary_color: #937374aa;
+  --padding_left: 35px;
 }
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
 }
 body {
-  background-color: var(--primary_color, white);
+  margin: 0 auto;
+  max-width: 1200px;
 }
-
+a {
+  text-decoration: none;
+  color: var(--light_color);
+  font-weight: 900;
+}
 .container {
   display: flex;
-  flex-direction: row;
   height: 100vh;
+  flex-wrap: nowrap;
+  box-shadow: 5px 5px 5px gray;
 }
 .hero-image {
   display: flex;
+  width: 40vw;
   flex-direction: column;
   background: black url('./mining-bg.jpg');
   justify-content: center;
-  flex: 1;
+  overflow: hidden;
 }
 .hero-image .title {
   background-color: rgba(202, 183, 183, 0.333);
   text-align: center;
+  padding: 100px;
 }
 .hero-image .title img {
   margin-top: 5px;
-  width: 250px;
-  height: 250px;
+  width: min(250px, 35vw);
+  height: min(250px, 35vw);
 }
 .form-container {
-  background-color: #e5e8ee;
-  flex: 1;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: var(--tertiary_color);
 }
-
+.form-container .description {
+  height: 33vh;
+  padding: 100px 20px 0 var(--padding_left);
+  font-size: 1.1rem;
+}
+form {
+  height: 60vh;
+}
+form h1 {
+  padding: 40px 0 0 var(--padding_left);
+}
+form .input-box {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 15px;
+  margin-bottom: 80px;
+  box-shadow: 0 2px 2px var(--dark_color, green);
+  padding: 20px 20px 60px var(--padding_left);
+}
+form h1,
+form .input-box {
+  background-color: var(--light_color);
+}
+.input-box .details {
+  width: calc(100% / 2 - 40px);
+}
+.input-box .details label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+.input-box .details input {
+  width: 100%;
+  border: none;
+  height: 1.6rem;
+}
+form input[type='submit'] {
+  border: none;
+  font-size: 1.3rem;
+  margin-left: var(--padding_left);
+  padding: 10px 18px;
+  border-radius: 5px;
+  background-color: var(--dark_color);
+  color: var(--light_color, #fff);
+  letter-spacing: 2px;
+  box-shadow: 2px 2px 5px var(--dark_color);
+}
+form .log-in {
+  padding: var(--padding_left);
+}
 /* Photo by Tom Fisk: https://www.pexels.com/photo/yellow-excavator-2101137/ */
+/* Potpat0329/ */
