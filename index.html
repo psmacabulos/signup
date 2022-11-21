@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
     <title>Sign-in Form</title>
   </head>
   <body>
@@ -13,46 +14,82 @@
         <div class="title">
           <img src="./logo.jpg" alt="" srcset="" />
         </div>
+        <a
+          id="credits"
+          href="https://www.pexels.com/photo/yellow-excavator-2101137/"
+          >Photo by Tom Fisk:
+          https://www.pexels.com/photo/yellow-excavator-2101137/</a
+        >
       </div>
       <div class="form-container">
         <div class="description">
           <p>
-            This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams.
+            Do you want to receive the latest discounts and services we offer?
           </p>
+          <p>Be the first to know by signing up in our 1 minute form.</p>
           <p>Sign up <em>now </em> to get started.</p>
-          <br />
           <p>You <em>know </em>you want to.</p>
         </div>
         <form action="#" method="post">
-          <h1>Let's do this</h1>
+          <h1>Let's get started!</h1>
           <div class="input-box">
             <div class="details">
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" name="first-name" id="first-name" />
+              <label for="first-name">*FIRST NAME</label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                pattern="[^0-9]{1,30}"
+                title="Please avoid using numbers and symbols"
+              />
             </div>
             <div class="details">
-              <label for="last-name">LAST NAME</label>
-              <input type="text" name="last-name" id="last-name" />
+              <label for="last-name">*LAST NAME</label>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                pattern="[^0-9]{1,30}"
+                title="Please avoid using numbers and symbols"
+              />
             </div>
             <div class="details">
-              <label for="email">EMAIL</label>
+              <label for="email">*EMAIL</label>
               <input type="email" name="email" id="email" />
             </div>
             <div class="details">
-              <label for="phone-number">PHONE NUMBER</label>
-              <input type="tel" name="phone-number" id="phone-number" />
+              <label for="phone-number">*PHONE NUMBER</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                pattern="[0-9]{5,30}"
+                title="Please enter digits only"
+              />
             </div>
             <div class="details">
-              <label for="password">PASSWORD</label>
-              <input type="password" name="password" id="password" />
+              <label for="password">*PASSWORD</label>
+              <input
+                type="password"
+                name="password"
+                id="password1"
+                minlength="8"
+                maxlength="25"
+              />
             </div>
             <div class="details">
-              <label for="password">CONFIRM PASSWORD</label>
-              <input type="password" name="password" id="password" />
+              <label for="password2">*CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                name="password"
+                id="password2"
+                minlength="8"
+                maxlength="25"
+              />
+              <span class="error">The password does not match</span>
             </div>
           </div>
-          <input type="submit" value="Create Account" />
+          <input id="submit" type="submit" value="Create Account" />
           <p class="log-in">
             Already have an account?
             <a href="#" target="_blank" rel="noopener noreferrer">Log in</a>
